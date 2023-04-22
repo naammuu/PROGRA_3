@@ -27,8 +27,8 @@ Partial Class frmtipos
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.btnAdelante = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
+        Me.btnAdelante = New System.Windows.Forms.Button()
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.txtdescripción = New System.Windows.Forms.TextBox()
@@ -44,8 +44,8 @@ Partial Class frmtipos
         Me.Panel1.Controls.Add(Me.txtdescripción)
         Me.Panel1.Controls.Add(Me.lblCodigo)
         Me.Panel1.Controls.Add(Me.btnVolver)
-        Me.Panel1.Controls.Add(Me.btnAtras)
         Me.Panel1.Controls.Add(Me.btnAdelante)
+        Me.Panel1.Controls.Add(Me.btnAtras)
         Me.Panel1.Controls.Add(Me.btnEliminar)
         Me.Panel1.Controls.Add(Me.btnModificar)
         Me.Panel1.Controls.Add(Me.btnIngresar)
@@ -89,27 +89,12 @@ Partial Class frmtipos
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
         Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(628, 266)
+        Me.btnEliminar.Location = New System.Drawing.Point(628, 199)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(106, 33)
         Me.btnEliminar.TabIndex = 47
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
-        '
-        'btnAdelante
-        '
-        Me.btnAdelante.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAdelante.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.btnAdelante.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdelante.ForeColor = System.Drawing.Color.White
-        Me.btnAdelante.Image = CType(resources.GetObject("btnAdelante.Image"), System.Drawing.Image)
-        Me.btnAdelante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdelante.Location = New System.Drawing.Point(45, 375)
-        Me.btnAdelante.Name = "btnAdelante"
-        Me.btnAdelante.Size = New System.Drawing.Size(106, 33)
-        Me.btnAdelante.TabIndex = 48
-        Me.btnAdelante.Text = "   Adelante"
-        Me.btnAdelante.UseVisualStyleBackColor = False
         '
         'btnAtras
         '
@@ -119,19 +104,34 @@ Partial Class frmtipos
         Me.btnAtras.ForeColor = System.Drawing.Color.White
         Me.btnAtras.Image = CType(resources.GetObject("btnAtras.Image"), System.Drawing.Image)
         Me.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAtras.Location = New System.Drawing.Point(628, 375)
+        Me.btnAtras.Location = New System.Drawing.Point(236, 375)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(106, 33)
-        Me.btnAtras.TabIndex = 49
-        Me.btnAtras.Text = "Atras"
+        Me.btnAtras.TabIndex = 48
+        Me.btnAtras.Text = "   Atras"
         Me.btnAtras.UseVisualStyleBackColor = False
+        '
+        'btnAdelante
+        '
+        Me.btnAdelante.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAdelante.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnAdelante.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdelante.ForeColor = System.Drawing.Color.White
+        Me.btnAdelante.Image = CType(resources.GetObject("btnAdelante.Image"), System.Drawing.Image)
+        Me.btnAdelante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdelante.Location = New System.Drawing.Point(68, 375)
+        Me.btnAdelante.Name = "btnAdelante"
+        Me.btnAdelante.Size = New System.Drawing.Size(106, 33)
+        Me.btnAdelante.TabIndex = 49
+        Me.btnAdelante.Text = "Adelante"
+        Me.btnAdelante.UseVisualStyleBackColor = False
         '
         'btnVolver
         '
         Me.btnVolver.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVolver.ForeColor = System.Drawing.Color.Transparent
-        Me.btnVolver.Location = New System.Drawing.Point(628, 204)
+        Me.btnVolver.Location = New System.Drawing.Point(628, 254)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(106, 35)
         Me.btnVolver.TabIndex = 50
@@ -144,7 +144,7 @@ Partial Class frmtipos
         Me.lblCodigo.BackColor = System.Drawing.Color.Transparent
         Me.lblCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCodigo.ForeColor = System.Drawing.Color.White
-        Me.lblCodigo.Location = New System.Drawing.Point(54, 83)
+        Me.lblCodigo.Location = New System.Drawing.Point(64, 83)
         Me.lblCodigo.Name = "lblCodigo"
         Me.lblCodigo.Size = New System.Drawing.Size(108, 20)
         Me.lblCodigo.TabIndex = 51
@@ -152,7 +152,7 @@ Partial Class frmtipos
         '
         'txtdescripción
         '
-        Me.txtdescripción.Location = New System.Drawing.Point(205, 83)
+        Me.txtdescripción.Location = New System.Drawing.Point(189, 83)
         Me.txtdescripción.Margin = New System.Windows.Forms.Padding(2)
         Me.txtdescripción.Name = "txtdescripción"
         Me.txtdescripción.Size = New System.Drawing.Size(346, 20)
@@ -179,8 +179,8 @@ Partial Class frmtipos
     Friend WithEvents btnIngresar As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnEliminar As Button
-    Friend WithEvents btnAdelante As Button
     Friend WithEvents btnAtras As Button
+    Friend WithEvents btnAdelante As Button
     Friend WithEvents btnVolver As Button
     Friend WithEvents lblCodigo As Label
     Friend WithEvents txtdescripción As TextBox
