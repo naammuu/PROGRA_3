@@ -22,6 +22,7 @@ Partial Class frmIncidentes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmIncidentes))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
@@ -32,7 +33,6 @@ Partial Class frmIncidentes
         Me.txtusuario = New System.Windows.Forms.TextBox()
         Me.txtcorreo = New System.Windows.Forms.TextBox()
         Me.txttelefono = New System.Windows.Forms.TextBox()
-        Me.txtfecha = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -40,8 +40,13 @@ Partial Class frmIncidentes
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lblTitulo = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -49,16 +54,19 @@ Partial Class frmIncidentes
         Me.Panel1.AutoSize = True
         Me.Panel1.BackgroundImage = Global.PROYECTO.My.Resources.Resources.Imagen_de_WhatsApp_2023_04_19_a_las_21_01_52
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 450)
+        Me.Panel1.Size = New System.Drawing.Size(800, 519)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnLimpiar)
+        Me.Panel2.Controls.Add(Me.dtpFecha)
         Me.Panel2.Controls.Add(Me.btnIngresar)
         Me.Panel2.Controls.Add(Me.txtdescripcion)
         Me.Panel2.Controls.Add(Me.Label2)
@@ -68,14 +76,13 @@ Partial Class frmIncidentes
         Me.Panel2.Controls.Add(Me.txtusuario)
         Me.Panel2.Controls.Add(Me.txtcorreo)
         Me.Panel2.Controls.Add(Me.txttelefono)
-        Me.Panel2.Controls.Add(Me.txtfecha)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.btnVolver)
-        Me.Panel2.Location = New System.Drawing.Point(37, 29)
+        Me.Panel2.Location = New System.Drawing.Point(36, 81)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(728, 409)
         Me.Panel2.TabIndex = 0
@@ -84,6 +91,7 @@ Partial Class frmIncidentes
         '
         Me.txtdescripcion.Location = New System.Drawing.Point(158, 285)
         Me.txtdescripcion.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtdescripcion.MaxLength = 1000
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.Size = New System.Drawing.Size(249, 20)
         Me.txtdescripcion.TabIndex = 59
@@ -133,6 +141,7 @@ Partial Class frmIncidentes
         '
         Me.txtusuario.Location = New System.Drawing.Point(136, 124)
         Me.txtusuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtusuario.MaxLength = 50
         Me.txtusuario.Name = "txtusuario"
         Me.txtusuario.Size = New System.Drawing.Size(271, 20)
         Me.txtusuario.TabIndex = 53
@@ -141,6 +150,7 @@ Partial Class frmIncidentes
         '
         Me.txtcorreo.Location = New System.Drawing.Point(136, 169)
         Me.txtcorreo.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtcorreo.MaxLength = 50
         Me.txtcorreo.Name = "txtcorreo"
         Me.txtcorreo.Size = New System.Drawing.Size(271, 20)
         Me.txtcorreo.TabIndex = 54
@@ -149,17 +159,10 @@ Partial Class frmIncidentes
         '
         Me.txttelefono.Location = New System.Drawing.Point(136, 213)
         Me.txttelefono.Margin = New System.Windows.Forms.Padding(2)
+        Me.txttelefono.MaxLength = 10
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(271, 20)
         Me.txttelefono.TabIndex = 55
-        '
-        'txtfecha
-        '
-        Me.txtfecha.Location = New System.Drawing.Point(136, 249)
-        Me.txtfecha.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtfecha.Name = "txtfecha"
-        Me.txtfecha.Size = New System.Drawing.Size(271, 20)
-        Me.txtfecha.TabIndex = 56
         '
         'Label7
         '
@@ -223,7 +226,9 @@ Partial Class frmIncidentes
         '
         'btnVolver
         '
+        Me.btnVolver.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVolver.ForeColor = System.Drawing.Color.White
         Me.btnVolver.Location = New System.Drawing.Point(509, 330)
         Me.btnVolver.Margin = New System.Windows.Forms.Padding(2)
         Me.btnVolver.Name = "btnVolver"
@@ -234,7 +239,11 @@ Partial Class frmIncidentes
         '
         'btnIngresar
         '
+        Me.btnIngresar.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.ForeColor = System.Drawing.Color.White
+        Me.btnIngresar.Image = CType(resources.GetObject("btnIngresar.Image"), System.Drawing.Image)
+        Me.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnIngresar.Location = New System.Drawing.Point(509, 43)
         Me.btnIngresar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnIngresar.Name = "btnIngresar"
@@ -243,11 +252,56 @@ Partial Class frmIncidentes
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
+        'dtpFecha
+        '
+        Me.dtpFecha.Location = New System.Drawing.Point(136, 246)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(271, 20)
+        Me.dtpFecha.TabIndex = 61
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.ForeColor = System.Drawing.Color.White
+        Me.btnLimpiar.Image = CType(resources.GetObject("btnLimpiar.Image"), System.Drawing.Image)
+        Me.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLimpiar.Location = New System.Drawing.Point(509, 85)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(145, 28)
+        Me.btnLimpiar.TabIndex = 62
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.lblTitulo)
+        Me.Panel3.Location = New System.Drawing.Point(36, 12)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(728, 52)
+        Me.Panel3.TabIndex = 2
+        '
+        'lblTitulo
+        '
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.BackColor = System.Drawing.Color.Transparent
+        Me.lblTitulo.Font = New System.Drawing.Font("Malgun Gothic", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.ForeColor = System.Drawing.Color.DarkSlateGray
+        Me.lblTitulo.Location = New System.Drawing.Point(9, 3)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(146, 37)
+        Me.lblTitulo.TabIndex = 0
+        Me.lblTitulo.Text = "Incidentes"
+        '
         'frmIncidentes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 519)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmIncidentes"
@@ -256,6 +310,8 @@ Partial Class frmIncidentes
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -271,7 +327,6 @@ Partial Class frmIncidentes
     Friend WithEvents txtusuario As TextBox
     Friend WithEvents txtcorreo As TextBox
     Friend WithEvents txttelefono As TextBox
-    Friend WithEvents txtfecha As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -279,4 +334,8 @@ Partial Class frmIncidentes
     Friend WithEvents Label3 As Label
     Friend WithEvents btnVolver As Button
     Friend WithEvents btnIngresar As Button
+    Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents lblTitulo As Label
 End Class

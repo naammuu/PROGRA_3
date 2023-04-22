@@ -24,27 +24,27 @@ Partial Class frmSoluciones
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnmodificar = New System.Windows.Forms.Button()
-        Me.txtmanoo = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txttotal = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtTecnico = New System.Windows.Forms.TextBox()
-        Me.txtcausa = New System.Windows.Forms.TextBox()
         Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.btnmodificar = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtmanoo = New System.Windows.Forms.TextBox()
         Me.btnVolver = New System.Windows.Forms.Button()
-        Me.txtfechas = New System.Windows.Forms.TextBox()
-        Me.txtsolucion = New System.Windows.Forms.TextBox()
-        Me.txthoras = New System.Windows.Forms.TextBox()
-        Me.txtcostore = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtcausa = New System.Windows.Forms.TextBox()
+        Me.txtTecnico = New System.Windows.Forms.TextBox()
         Me.txtstatus = New System.Windows.Forms.TextBox()
+        Me.txtcostore = New System.Windows.Forms.TextBox()
+        Me.txthoras = New System.Windows.Forms.TextBox()
+        Me.txtsolucion = New System.Windows.Forms.TextBox()
+        Me.txttotal = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -63,6 +63,7 @@ Partial Class frmSoluciones
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.dtpFecha)
         Me.Panel2.Controls.Add(Me.btnIngresar)
         Me.Panel2.Controls.Add(Me.btnmodificar)
         Me.Panel2.Controls.Add(Me.Label13)
@@ -75,7 +76,6 @@ Partial Class frmSoluciones
         Me.Panel2.Controls.Add(Me.txtcostore)
         Me.Panel2.Controls.Add(Me.txthoras)
         Me.Panel2.Controls.Add(Me.txtsolucion)
-        Me.Panel2.Controls.Add(Me.txtfechas)
         Me.Panel2.Controls.Add(Me.txttotal)
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.Label16)
@@ -89,6 +89,17 @@ Partial Class frmSoluciones
         Me.Panel2.Size = New System.Drawing.Size(721, 379)
         Me.Panel2.TabIndex = 0
         '
+        'btnIngresar
+        '
+        Me.btnIngresar.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.Location = New System.Drawing.Point(566, 73)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(124, 34)
+        Me.btnIngresar.TabIndex = 44
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = False
+        '
         'btnmodificar
         '
         Me.btnmodificar.BackColor = System.Drawing.SystemColors.ButtonFace
@@ -100,6 +111,18 @@ Partial Class frmSoluciones
         Me.btnmodificar.Text = "Modificar"
         Me.btnmodificar.UseVisualStyleBackColor = False
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label13.Location = New System.Drawing.Point(23, 194)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(167, 20)
+        Me.Label13.TabIndex = 31
+        Me.Label13.Text = "Costo de repuesto :"
+        '
         'txtmanoo
         '
         Me.txtmanoo.Location = New System.Drawing.Point(134, 280)
@@ -107,75 +130,6 @@ Partial Class frmSoluciones
         Me.txtmanoo.Name = "txtmanoo"
         Me.txtmanoo.Size = New System.Drawing.Size(285, 20)
         Me.txtmanoo.TabIndex = 48
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label16.Location = New System.Drawing.Point(23, 280)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(99, 20)
-        Me.Label16.TabIndex = 47
-        Me.Label16.Text = "Manoobra :"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label15.Location = New System.Drawing.Point(23, 337)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(59, 20)
-        Me.Label15.TabIndex = 46
-        Me.Label15.Text = "Total :"
-        '
-        'txttotal
-        '
-        Me.txttotal.Location = New System.Drawing.Point(98, 339)
-        Me.txttotal.Margin = New System.Windows.Forms.Padding(2)
-        Me.txttotal.Name = "txttotal"
-        Me.txttotal.Size = New System.Drawing.Size(321, 20)
-        Me.txttotal.TabIndex = 45
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label8.Location = New System.Drawing.Point(23, 18)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(81, 20)
-        Me.Label8.TabIndex = 36
-        Me.Label8.Text = "Tecnico :"
-        '
-        'txtTecnico
-        '
-        Me.txtTecnico.Location = New System.Drawing.Point(122, 20)
-        Me.txtTecnico.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtTecnico.Name = "txtTecnico"
-        Me.txtTecnico.Size = New System.Drawing.Size(297, 20)
-        Me.txtTecnico.TabIndex = 37
-        '
-        'txtcausa
-        '
-        Me.txtcausa.Location = New System.Drawing.Point(122, 50)
-        Me.txtcausa.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtcausa.Name = "txtcausa"
-        Me.txtcausa.Size = New System.Drawing.Size(297, 20)
-        Me.txtcausa.TabIndex = 38
-        '
-        'btnIngresar
-        '
-        Me.btnIngresar.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresar.Location = New System.Drawing.Point(566, 73)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(124, 34)
-        Me.btnIngresar.TabIndex = 44
-        Me.btnIngresar.Text = "Ingresar"
-        Me.btnIngresar.UseVisualStyleBackColor = False
         '
         'btnVolver
         '
@@ -188,37 +142,33 @@ Partial Class frmSoluciones
         Me.btnVolver.Text = "Volver a menu"
         Me.btnVolver.UseVisualStyleBackColor = False
         '
-        'txtfechas
+        'Label8
         '
-        Me.txtfechas.Location = New System.Drawing.Point(122, 87)
-        Me.txtfechas.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtfechas.Name = "txtfechas"
-        Me.txtfechas.Size = New System.Drawing.Size(297, 20)
-        Me.txtfechas.TabIndex = 39
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label8.Location = New System.Drawing.Point(23, 18)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(81, 20)
+        Me.Label8.TabIndex = 36
+        Me.Label8.Text = "Tecnico :"
         '
-        'txtsolucion
+        'txtcausa
         '
-        Me.txtsolucion.Location = New System.Drawing.Point(127, 129)
-        Me.txtsolucion.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtsolucion.Name = "txtsolucion"
-        Me.txtsolucion.Size = New System.Drawing.Size(292, 20)
-        Me.txtsolucion.TabIndex = 40
+        Me.txtcausa.Location = New System.Drawing.Point(122, 50)
+        Me.txtcausa.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtcausa.Name = "txtcausa"
+        Me.txtcausa.Size = New System.Drawing.Size(297, 20)
+        Me.txtcausa.TabIndex = 38
         '
-        'txthoras
+        'txtTecnico
         '
-        Me.txthoras.Location = New System.Drawing.Point(127, 160)
-        Me.txthoras.Margin = New System.Windows.Forms.Padding(2)
-        Me.txthoras.Name = "txthoras"
-        Me.txthoras.Size = New System.Drawing.Size(292, 20)
-        Me.txthoras.TabIndex = 41
-        '
-        'txtcostore
-        '
-        Me.txtcostore.Location = New System.Drawing.Point(213, 196)
-        Me.txtcostore.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtcostore.Name = "txtcostore"
-        Me.txtcostore.Size = New System.Drawing.Size(206, 20)
-        Me.txtcostore.TabIndex = 43
+        Me.txtTecnico.Location = New System.Drawing.Point(122, 20)
+        Me.txtTecnico.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTecnico.Name = "txtTecnico"
+        Me.txtTecnico.Size = New System.Drawing.Size(297, 20)
+        Me.txtTecnico.TabIndex = 37
         '
         'txtstatus
         '
@@ -228,9 +178,66 @@ Partial Class frmSoluciones
         Me.txtstatus.Size = New System.Drawing.Size(235, 20)
         Me.txtstatus.TabIndex = 42
         '
+        'txtcostore
+        '
+        Me.txtcostore.Location = New System.Drawing.Point(213, 196)
+        Me.txtcostore.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtcostore.Name = "txtcostore"
+        Me.txtcostore.Size = New System.Drawing.Size(206, 20)
+        Me.txtcostore.TabIndex = 43
+        '
+        'txthoras
+        '
+        Me.txthoras.Location = New System.Drawing.Point(127, 160)
+        Me.txthoras.Margin = New System.Windows.Forms.Padding(2)
+        Me.txthoras.Name = "txthoras"
+        Me.txthoras.Size = New System.Drawing.Size(292, 20)
+        Me.txthoras.TabIndex = 41
+        '
+        'txtsolucion
+        '
+        Me.txtsolucion.Location = New System.Drawing.Point(127, 129)
+        Me.txtsolucion.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtsolucion.Name = "txtsolucion"
+        Me.txtsolucion.Size = New System.Drawing.Size(292, 20)
+        Me.txtsolucion.TabIndex = 40
+        '
+        'txttotal
+        '
+        Me.txttotal.Location = New System.Drawing.Point(98, 339)
+        Me.txttotal.Margin = New System.Windows.Forms.Padding(2)
+        Me.txttotal.Name = "txttotal"
+        Me.txttotal.Size = New System.Drawing.Size(321, 20)
+        Me.txttotal.TabIndex = 45
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label15.Location = New System.Drawing.Point(23, 337)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(59, 20)
+        Me.Label15.TabIndex = 46
+        Me.Label15.Text = "Total :"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label16.Location = New System.Drawing.Point(23, 280)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(99, 20)
+        Me.Label16.TabIndex = 47
+        Me.Label16.Text = "Manoobra :"
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label9.Location = New System.Drawing.Point(23, 48)
@@ -242,6 +249,7 @@ Partial Class frmSoluciones
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label10.Location = New System.Drawing.Point(23, 87)
@@ -253,6 +261,7 @@ Partial Class frmSoluciones
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label11.Location = New System.Drawing.Point(23, 127)
@@ -264,6 +273,7 @@ Partial Class frmSoluciones
         'Label12
         '
         Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label12.Location = New System.Drawing.Point(23, 160)
@@ -272,20 +282,10 @@ Partial Class frmSoluciones
         Me.Label12.TabIndex = 32
         Me.Label12.Text = "Horas :"
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label13.Location = New System.Drawing.Point(23, 194)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(167, 20)
-        Me.Label13.TabIndex = 31
-        Me.Label13.Text = "Costo de repuesto :"
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label14.Location = New System.Drawing.Point(23, 236)
@@ -293,6 +293,13 @@ Partial Class frmSoluciones
         Me.Label14.Size = New System.Drawing.Size(127, 20)
         Me.Label14.TabIndex = 30
         Me.Label14.Text = "Nuevo Status :"
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.Location = New System.Drawing.Point(122, 86)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(297, 20)
+        Me.dtpFecha.TabIndex = 50
         '
         'frmSoluciones
         '
@@ -326,7 +333,6 @@ Partial Class frmSoluciones
     Friend WithEvents txtcostore As TextBox
     Friend WithEvents txthoras As TextBox
     Friend WithEvents txtsolucion As TextBox
-    Friend WithEvents txtfechas As TextBox
     Friend WithEvents txttotal As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
@@ -335,4 +341,5 @@ Partial Class frmSoluciones
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents dtpFecha As DateTimePicker
 End Class

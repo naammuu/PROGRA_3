@@ -11,7 +11,7 @@ Public Class frmDepartamentos
     Sub conexionBD()
         Dim conexionDepartamentos As SqlConnection = New SqlConnection()
         ' Llenamos varible string, con los datos del string de conexion
-        Dim strconexion As String = "data source=DESKTOP-MPLP2PA\SQLLOCAL;
+        Dim strconexion As String = "data source=DESKTOP-MPLP2PA\SQLEXPRESS;
                        initial catalog=servicios;integrated security=true"
         ' Al objeto conexion le asignamos el string de conexion
         conexionDepartamentos.ConnectionString = strconexion
