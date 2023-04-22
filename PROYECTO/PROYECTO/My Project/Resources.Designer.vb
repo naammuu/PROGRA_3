@@ -153,6 +153,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Imagen_de_WhatsApp_2023_04_19_a_las_21_012() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Imagen de WhatsApp 2023-04-19 a las 21.012", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property verificar() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("verificar", resourceCulture)
